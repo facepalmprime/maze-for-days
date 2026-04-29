@@ -1,3 +1,4 @@
+import random
 from graphics import Line, Point
 class Cell: 
     def __init__(self, win=None):
@@ -10,6 +11,7 @@ class Cell:
         self.__y1 = -1
         self.__y2 = -1
         self.__win = win
+        self.visited = False
      
     def draw(self, x1, y1, x2, y2):
         if self.__win is None:
@@ -75,6 +77,12 @@ class Cell:
 
 
           self.__win.draw_line(line, fill_color)
+     
+       
+
+
+         
+         
         
          
          
