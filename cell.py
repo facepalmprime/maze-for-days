@@ -39,3 +39,29 @@ class Cell:
              end_point = Point(x2, y2)
              bottom_line = Line(start_point, end_point)
              self.__win.draw_line(bottom_line, "black")
+     
+    def draw_move(self, to_cell, undo=False):
+          x_center_1 = (self.__x1 + self.__x2) /2
+          y_center_1 = (self.__y1 + self.__y2) /2
+          x_center_2 = (to_cell.__x1 + to_cell.__x2) /2
+          y_center_2 = (to_cell.__y1 + to_cell.__y2) /2
+          if undo:
+               fill_color = "gray"
+          else:
+               fill_color = "red"
+          p1 = Point(x_center_1, y_center_1)
+          p2 = Point(x_center_2, y_center_2)
+
+          line = Line(p1, p2)
+
+
+          self.__win.draw_line(line, fill_color)
+        
+         
+         
+         
+         
+         
+         
+         
+         
